@@ -9,6 +9,11 @@
 # canned fruit
 # canned vegetables
 # granola bars
+# toothbrushes
+# toothpaste
+# soap
+# deodorant
+# hygene
 Item.create(name: "Bumble Bee Solid White Albacore Tuna in Water, 12 Oz", price: 3.74, image: "", description: ["Gluten Free", "Kosher", "Omega-3s"], asin: "B0010Z61P2")
 Item.create(name: "Jif Creamy Peanut Butter, 40 Oz", price: 4.96, image: "", description: ["Fresh Roasted Peanut Taste", "Choosy Moms Choose Jif", "Creamy"], asin: "B00I8G7268")
 Item.create(name: "Jif Extra Crunchy Peanut Butter, 40 Oz", price: 3.77, image: "", description: ["Fresh Roasted Peanut Taste", "Choosy Moms Choose Jif", "Extra Crunchy"], asin: "B00I8G6S9K")
