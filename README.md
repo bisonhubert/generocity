@@ -1,4 +1,4 @@
-#generoCity
+#generocity
 
 GeneroCity is:
 
