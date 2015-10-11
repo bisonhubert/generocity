@@ -1,4 +1,6 @@
 # Inventory of Items in Pantry
+# tuna
+# peanut putter
 # canned meat
 # soup
 # chili
@@ -7,18 +9,24 @@
 # canned fruit
 # canned vegetables
 # granola bars
-
-Item.create(name: "Bumble Bee Solid White Albacore Tuna in Water, 12 Oz", price: 3.74, price_per_ounce: 0.31, image: "", description: ["Gluten Free", "Kosher", "Omega-3s"], asin: "B0010Z61P2")
-Item.create(name: "Jif Creamy Peanut Butter, 40 Oz", price: 4.96, price_per_ounce: 0.12, image: "", description: ["Fresh Roasted Peanut Taste", "Choosy Moms Choose Jif", "Creamy"], asin: "B00I8G7268")
-Item.create(name: "Jif Extra Crunchy Peanut Butter, 40 Oz", price: 3.77, price_per_ounce: 0.09, image: "", description: ["Fresh Roasted Peanut Taste", "Choosy Moms Choose Jif", "Extra Crunchy"], asin: "B00I8G6S9K")
-Item.create(name: "Progresso Rich & Hearty Soup, Chicken & Homestyle Noodles, 19 Oz", price: 1.50, price_per_ounce: 0.08, image: "", description: ["Contains wheat, egg, and soy ingredients", "No MSG added"], asin: "B000Q5LWE2")
-Item.create(name: "", price: , image: "", description: [""], asin: "")
-Item.create(name: "", price: , image: "", description: [""], asin: "")
-Item.create(name: "", price: , image: "", description: [""], asin: "")
-Item.create(name: "", price: , image: "", description: [""], asin: "")
-Item.create(name: "", price: , image: "", description: [""], asin: "")
-Item.create(name: "", price: , image: "", description: [""], asin: "")
-Item.create(name: "", price: , image: "", description: [""], asin: "")
+Item.create(name: "Bumble Bee Solid White Albacore Tuna in Water, 12 Oz", price: 3.74, image: "", description: ["Gluten Free", "Kosher", "Omega-3s"], asin: "B0010Z61P2")
+Item.create(name: "Jif Creamy Peanut Butter, 40 Oz", price: 4.96, image: "", description: ["Fresh Roasted Peanut Taste", "Choosy Moms Choose Jif", "Creamy"], asin: "B00I8G7268")
+Item.create(name: "Jif Extra Crunchy Peanut Butter, 40 Oz", price: 3.77, image: "", description: ["Fresh Roasted Peanut Taste", "Choosy Moms Choose Jif", "Extra Crunchy"], asin: "B00I8G6S9K")
+Item.create(name: "Progresso Rich & Hearty Soup, Chicken & Homestyle Noodles, 19 Oz", price: 1.50, image: "", description: ["Contains wheat, egg, and soy ingredients", "No MSG added"], asin: "B000Q5LWE2")
+Item.create(name: "Dole Mixed Tropical Fruit In Passion Fruit Nectar, 15.25 Oz", price: 1.42, image: "", description: ["Pop and peel lid", "Excellent source of Vitamins A & C", "Kosher"], asin: "B000RY6G3E")
+Item.create(name: "Van Camp's Pork & Beans, 15 Oz", price: 0.86, image: "", description: ["Van Camp's Pork and Beans", "Delicious as a meal or side"], asin: "B00I9VCRJ4")
+Item.create(name: "Rosarita Refried Beans, Traditional, 16 Oz", price: 1, image: "", description: ["Rosarita Traditional Refried Beans are made with the highest quality ingredients and the perfect combination of whole and smooth beans", "Enjoy the taste of the original recipe, Mexican-style refried beans"], asin: "B00I9VCI66")
+Item.create(name: "Chef Boyardee Ravioli, Beef, (4 Count, 15 Ounces Each)", price: 3.62, image: "", description: ["Contains 15oz Chef Boyardee Overstuffed Beef Ravioli cans; real great food, real great chef", "Chef Boyardee Overstuffed Ravioli with Beef has 0 grams of trans fat and 10 grams of protein per serving for a mouthwatering meal or hearty snack"], asin: "B00I9VBMLI")
+Item.create(name: "General Mills Cereals Honey Nut Cheerios Medley Crunch, 13.1 Ounce", price: 2.98, image: "", description: ["Sweetened oat and wheat cereal with real honey and natural almond flavor", "More whole grain than any other ingredient - 16 gram per serving", "Good source of calcium and vitamin D"], asin: "B00WYOGJT6")
+Item.create(name: "Green Giant Whole Kernel Sweet Corn, 14.5 Ounce (Pack of 4)", price: 3.28, image: "", description: ["Picked at the peak of perfection", "Official box tops for education brand", "Four pack", "61 oz total"], asin: "B00XBOKQQK")
+Item.create(name: "Green Giant Kitchen Sliced Green Beans, 14.5 Ounce (Pack of 4)", price: 3.52, image: "", description: ["Picked at the peak of perfection", "Kosher", "61 oz total"], asin: "B00VYUBH1G")
+Item.create(name: "Green Giant Vegetable Cans, Sweet Peas, 14.5oz (Pack of 4)", price: 3.28, image: "", description: ["Picked at the peak of perfection", "Kosher", "Four pack", "61 oz total"], asin: "B00XBOKJJO")
+Item.create(name: "Nature Valley Crunchy Granola Bars, Variety Pack of Oats 'n Honey, Peanut Butter, and Maple Brown Sugar, 24 Count", price: 3.46, image: "", description: ["Variety pack includes Oats 'N Honey, Peanut Butter, and Maple Brown Sugar", "100% natural crunchy granola bars", "Excellent source of whole grain with 16 grams per serving (At least 48 grams recommended daily)", "24 Count Box"], asin: "B00J2AV5MG")
+Item.create(name: "Quaker Chewy Granola Bars, Reduced Sugar Variety Pack, 18 Count", price: 3.74, image: "", description: ["18-Count Box", "Variety Pack includes Chocolate Chip, Cookies & Cream, and Peanut Butter Chocolate Chip", "25% Less Sugar"], asin: "B00ID0OZKA")
+Item.create(name: "Progresso Rich & Hearty Soup, Beef Pot Roast, 18.5 Oz", price: 3.18, image: "", description: [""], asin: "B000Q5NG46")
+Item.create(name: "Progresso Vegetable Classics Soup, Minestrone, 19 Oz", price: 1.50, image: "", description: ["Full serving of vegetables"], asin: "")
+Item.create(name: "Chunky Roadhouse Beef and Bean Chili, 19 Oz", price: 2.25, image: "", description: ["Bean chili made with lean beef", "Good source of protein, fiber and vitamin A, low cholesterol with no trans fat", "Easy open pull tab"], asin: "B00IAE4O6E")
+Item.create(name: "Kellogg's Frosted Mini Wheats Original, 24 Ounce Box", price: 3.05, image: "", description: ["Eight crunchy layers of whole-grain fiber with a sweet frosted coating", "Made with 100% whole grain wheat--no saturated fat or cholesterol", "Healthy breakfast or snack that the whole family will love"], asin: "B00QTX0D18")
 
 
 
