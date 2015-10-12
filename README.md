@@ -36,14 +36,4 @@ As a group, we decided on the following technologies. Some were completely new. 
 
 
 ### Creators
-generocity is:
-
-[Bison Hubert](https://github.com/davidbison) (team lead)
-
-[Ana Nelson](https://github.com/anaclair)
-
-[Anthony Castelli](https://github.com/anthonycastelli01)
-
-[Brian Park](https://github.com/br1anp4rk718).
-
-This is our Phase 3 final project at DevBootcamp SF.
+generocity is [Bison Hubert](https://github.com/davidbison) (team lead), [Ana Nelson](https://github.com/anaclair), [Anthony Castelli](https://github.com/anthonycastelli01), [Brian Park](https://github.com/br1anp4rk718). This is our Phase 3 final project at DevBootcamp SF.
