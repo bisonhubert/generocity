@@ -15,7 +15,8 @@ class ItemsController < ApplicationController
   end
 
   # GET /items/new
-
+  def edit
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
