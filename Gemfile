@@ -40,15 +40,18 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Devise for password encryption and user authentication
 gem 'devise'
 
-# Use redis with hiredis driver for shopping cart functionality
+# Use Redis with hiredis driver for shopping cart functionality
 gem 'redis'
 gem 'hiredis'
 
-# Use figaro to securely store Braintree keys
+# Use Figaro to securely store Braintree keys
 gem 'figaro'
 
 # Use Braintree for payment gateway
 gem 'braintree'
+
+# Use Gon to pass Rails variables to JavaScript
+gem 'gon'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
