@@ -24,10 +24,10 @@ Want to contribute to generocity? Here's how:
 
 ### Technologies
 As a group, we decided on the following technologies. Some were completely new. Others have been the focus of our experience at Dev Bootcamp.
-####Built with Ruby on Rails
-####User Authentication with Devise
-####Automation with CasperJS
-####Shopping Cart and Purchase with Redis and Braintree
+-Built with Ruby on Rails
+-User authentication with Devise
+-Automated purchasing with CasperJS
+-Shopping cart and money handling with Redis and Braintree
 
 
 
