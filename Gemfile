@@ -44,6 +44,12 @@ gem 'devise'
 gem 'redis'
 gem 'hiredis'
 
+# Use figaro to securely store Braintree keys
+gem 'figaro'
+
+# Use Braintree for payment gateway
+gem 'braintree'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
