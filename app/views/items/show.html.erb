@@ -25,5 +25,12 @@
   <%= @item.asin %>
 </p>
 
+<%if signed_in?%>
+  <%=link_to "", class: "button", data: {target: @cart_action, addUrl: add_to_cart_path(@item), removeUrl: remove_from_cart_path(@item)} do%>
+    <i class="fi-shopping-cart"></i>  <!-- Optional Foundation icon. -->
+    <span><%=@cart_action%></span> Cart
+  <%end%>
+<%end%>
+
 <%= link_to 'Edit', edit_item_path(@item) %> |
 <%= link_to 'Back', items_path %>
