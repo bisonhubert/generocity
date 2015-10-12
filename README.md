@@ -1,27 +1,18 @@
-generocity -- live generously
+generocity | live generously
 =============================
 
-Q: What is your project?
-A: generocity is a way to connect people who want to help with people in need. We provide a pantry where donors can browse for items. Upon checkout, donors can select a donation center in San Francisco where the items will be shipped.
 
-
-
-### How it Works
-It works by...
+generocity is a chance to connect people interested in helping others with people in need. Born out of a group project in the final phase of Dev Bootcamp SF, our team spent a week conceptualizing, wireframing, researching eCommerce technologies and automated payment systems, designing a look and feel that promotes the ideas behind the project, and coding with the languages we've been immersed in for the last nine weeks. The result is a web application that lets users shop for pantry items and send them out to donation centers in San Francisco, CA.
 
 
 
 ### Installation
-You can install it by...
-You can also find it on Heroku...
+[generocity](https://dashboard.heroku.com/apps) was launched to Heroku on October 16, 2015. For the full UX, please check us out!
 
 
 
 ### Contributing
-Want to contribute to generocity? Start by:
-
-
-
+Want to contribute to generocity? Here's how:
 1. Fork the repo on [GitHub](https://github.com/davidbison/generocity)
 2. Clone down your fork
 3. Create an accurate and concise new branch name to build and push your change from
@@ -31,17 +22,18 @@ Want to contribute to generocity? Start by:
 
 
 
-### Features and Technologies
-As a group, we decided what features our MVP should have, as well as what technologies we would need...
+### Technologies
+As a group, we decided on the following technologies. Some were completely new. Others have been the focus of our experience at Dev Bootcamp.
 
+-Built with Ruby on Rails
 
+-User authentication with Devise
 
-####Built with Ruby on Rails
-####User Authentication with Devise
-####Automation with CasperJS
-####Shopping Cart and Purchase with Redis and Braintree
+-Automated purchasing with CasperJS
+
+-Shopping cart and money handling with Redis and Braintree
 
 
 
 ### Creators
-generocity is Bison Hubert, Ana Nelson, Anthony Castelli, and Brian Park. This is our Phase 3 final project at DevBootcamp SF.
+generocity is [Bison Hubert](https://github.com/davidbison) (team lead), [Ana Nelson](https://github.com/anaclair), [Anthony Castelli](https://github.com/anthonycastelli01), [Brian Park](https://github.com/br1anp4rk718). This is our Phase 3 final project at DevBootcamp SF.
