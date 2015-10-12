@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
   resources :donation_centers
+
+  get 'transactions/new'
   get 'carts/show'
 
   resources :items, only: [:show, :index]
@@ -11,6 +13,8 @@ Rails.application.routes.draw do
     put 'add/:item_id', to: 'carts#add', as: :add_to
     put 'remove/:item_id', to: 'carts#remove', as: :remove_from
   end
+
+  resources :transactions, only: [:new, :create]
 
   get 'welcome/index'
   root 'items#index'
