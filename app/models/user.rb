@@ -33,4 +33,8 @@ class User < ActiveRecord::Base
   def purchase?(item) # Check if item is in items (a collection belonging to the user through orders)
     items.include?(item)
   end
+
+  def has_payment_info?
+    braintree_customer_id
+  end
 end
