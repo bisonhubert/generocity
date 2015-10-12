@@ -16,3 +16,9 @@
 !/log/.keep
 /tmp
 /gemfile.lock
+
+# Ignore figaro secret variables
+/application.yml
+
+# Ignore redis dump
+/dump.rdb
