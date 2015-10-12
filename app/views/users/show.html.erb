@@ -1,0 +1,309 @@
+
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="Lang" content="en"/>
+<meta name="author" content="Mihai Balea"/>
+<meta http-equiv="Reply-to" content="contact@mihaibalea.info"/>
+
+
+<link href="favicon.ico" type="image/gif" rel="icon" />
+<link id="mainCSS" rel="stylesheet" type="text/css" href="css/style.css"/>
+<link id="mainCSS" rel="stylesheet" type="text/css" href="css/skins.css"/>
+<link rel="stylesheet" type="text/css" href="css/skin.css" />
+
+<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css' />
+
+<script charset="utf-8" type="text/javascript" src="js/jquery.1.4.2.min.js"></script>
+<script type= "text/javascript" src="js/queryLoader.js" ></script>
+<script type="text/javascript" src="js/jquery.backgroundposition.js"></script>
+<script type="text/javascript" src="js/jquery.smooth-scroll.js"></script>
+<script type="text/javascript" src="js/sp.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+<script type="text/javascript" src="js/skins.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+
+<body id="body_pat" class="red">
+<div id="wrapper">
+
+    
+    <div id="tools">
+        <div id="but_expand">+</div>
+        <div id="but_collapse">-</div>
+        <span>JUMP TO:</span>
+        <div class="clear"></div>
+        <div id="toolsHolder">
+            <div id="palette">
+                <div id="c_red" class="selected"></div>
+                <div id="c_blue"></div>
+                <div id="c_green"></div>
+                <div id="c_pink"></div>
+                <div id="c_orange"></div>
+                <div id="c_gray"></div>
+            </div>
+            <div id="patterns">
+                <div id="pat_1" class="selected"></div>
+                <div id="pat_2"></div>
+                <div id="pat_3"></div>
+                <div id="pat_4"></div>
+                <div id="pat_5"></div>
+            </div>
+        </div>
+    </div><!-- end div #tools -->
+
+<!------------------------- NAVIGATION -->
+
+    <div id="navbarHolder">
+        <div id="navbar">
+            <ul>
+                                
+                <li><a id="nav_about" href="#about">About ME<span class="m_w"></span><span class="m_r"></span></a></li>
+                <li><a id="nav_work" href="#work">WORK<span class="m_w">WORK</span><span class="m_r">WORK</span></a></li>
+                <li><a id="nav_projects" href="#projects">Projects<span class="m_w">Projects</span><span class="m_r">Projects</span></a></li>
+                <li><a id="nav_contact" href="#contact">Contact<span class="m_w">Contact</span><span class="m_r">Contact</span></a></li>
+            </ul>
+        </div>
+    </div><!-- end div #navbarHolder -->
+
+<!------------------------- CONTENT -->
+    
+    <div id="container">
+        <div id="logo" class="site-message-absolute">
+            <div class="nav_logo_w"></div>
+        </div>
+
+<!------------------------- ABOUT -->
+        
+        <div id="about">
+            <a id="logo_big"  href="index.html"></a>
+            <div id="headline" class="left grid">
+                <h1>WELCOME BACK <%= current_user.email %></h1><br><br>
+
+                <h2>YOUR GENEROCITY LEVEL</h2>
+                <div class="progress">
+  				<div class="progress-bar progress-bar-striped active" role="progressbar"
+			  aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+			    40%
+			  </div>
+			</div>
+                <h3>You've signed in <%= current_user.sign_in_count %> times! Thank you for living GeneroCity-ly</h3>
+                <h2><span>Last time you visited was <%= current_user.last_sign_in_at %></span><br /><br><br><a href="mailto:youremail@yourdomain.com"><%= current_user.email %></a></h2>
+            </div>
+            <div id="about_pict" class="grid"><img src="images/my_picture.jpg" alt="Jessica Chung" /></div>
+            <div class="clear">&nbsp;</div>
+            <div class="left grid"></div>
+            <div class="left grid about_text">
+				<p>
+					Can put other user information here
+				</p>
+            </div>
+            <div class="right grid about_text">
+				<p>
+					more info??
+					<ul>
+					<li><strong>PUT LIST OF PURCHASES</strong></li>
+					<li><strong>DONATION #1</strong></li>
+					<li><strong>DONATION #2</strong></li>
+					<li><strong>DONATION #3</strong></li>
+					<li><strong>DONATION #4</strong></li>
+					<li><strong>DONATION #5</strong></li>
+					</ul>
+				</p>
+            </div>
+			<div class="clear"></div>
+		</div><!-- end div #about -->
+
+        <div class="clear"></div>
+
+<!------------------------- WORK -->
+
+        <div id="work">
+            <h2>CAN PUT OTHER STUFF HERE?</h2>
+            <div class="projectsContainer">
+                <div id="project" class="item_details">
+                    <div class="slide_inner"></div>
+                	<div class="next_slide">&nbsp;</div>
+                    <div class="prev_slide">&nbsp;</div>
+<!-- WORK 1 -->
+                    <div class="prjinfo" id="iit_1">
+                        <div class="item_slider">
+                            <ul>
+                                <li class="iit_1 pic selected"><img src="images/projects/slide_w1_1.jpg" alt="My Work 1" /></li>
+                                <li class="iit_1 pic"><img src="images/projects/slide_w1_1.jpg" alt="My Work 1" /></li>
+                                <li class="iit_1 pic"><img src="images/projects/slide_w1_1.jpg" alt="My Work 1" /></li>
+                            </ul> 
+                        </div>
+                        <div class="item_text">
+                            <h3>My Work 1</h3>
+                            <div class="clear"></div>
+                            <h4>Overview:</h4>
+                            <div class="clear"></div>
+                            <p>Maybe this isn't necessary</p>
+                            <h4>Another user feature we might implement?</h4>
+                            <ul>
+                                <li>#1</li>
+                                <li>#2</li>
+                                <li>#3</li>
+                            </ul>
+                            
+                            
+                        </div>
+                    </div><!-- end div #iit_1 -->
+<!-- WORK 2 -->
+                    
+ 
+                        <div class="item_text">
+                            <h3>My Work 2</h3>
+                            <div class="clear"></div>
+                            <h4>Overview:</h4>
+                            <div class="clear"></div>
+                            <p>DONATION CENTERS?
+                            </p>
+                            <h4>My Contributionsss here?:</h4>
+                            <ul>
+                                <li>DONATED HERE #1</li>
+                                <li>Donated HERE #2</li>
+                                <li>Donated here #3</li>
+                            </ul>
+                            <h5>Time stamps </h5>
+                            
+                            
+          
+<!-- WORK 3 -->         
+                    
+                        
+<!-- WORK 7 -->     
+                    
+<!-- WORK 8 -->     
+                    
+<!-- WORK 9 -->     
+                    
+                
+<!-- WORKS GRID -->
+
+            	
+        
+<!------------------------- PROJECTS -->
+        
+        <div id="projects">
+            <h2>Projects.</h2>
+            <div class="projectsContainer">
+<!-- PROJECT 1 -->
+                <div class="pprj">
+                    <div class="grid left">
+                        <div class="item">
+                            <img src="images/projects/thumb_p1.jpg" alt="Project Name 1" />
+                            <a class="hover" href="http://www.templatesbook.com" title="Project Name 1" target="_blank"><span class='h3'>Project Name 1</span></a>
+                        </div>    
+                    </div>
+                    <div class="item_text">
+                        <h3>Project Name 1</h3>
+                            <div class="clear"></div>
+                            <h4>My Contribution:</h4>
+                            <ul>
+                                <li>User Interface Design</li>
+                                <li>HTML/CSS</li>
+                                <li>Wordpress - Content Management</li>
+                                <li>Information Architecture</li>
+                                <li>Images Editing</li>
+                                <li>Themes Creator</li>
+                                <li>Administrator</li>
+                            </ul>
+                            <a href="http://www.templatesbook.com" title="Project Name 1" target="_blank" class="btn_see_it_live">www.sitename.com</a>
+                    </div>
+                    <div class="item_text second">
+                        <h4>Overview:</h4>
+                            <div class="clear"></div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas convallis volutpat felis quis suscipit. Fusce suscipit auctor urna quis mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas convallis volutpat felis quis suscipit. Fusce suscipit auctor urna quis mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas convallis volutpat felis quis suscipit. Fusce suscipit auctor urna quis mattis.
+                            </p>
+                            <h5>Year: <span>2011</span></h5>
+                    </div>
+                </div><!-- end div .pprj -->
+<!-- PROJECT 2 -->
+                <div class="pprj">
+                    <div class="grid left">
+                        <div class="item">
+                            <img src="images/projects/thumb_p1.jpg" alt="Project Name 2" />
+                            <a class="hover" href="http://www.templatesbook.com" title="Project Name 2" target="_blank"><span class='h3'>Project Name 2</span></a>
+                        </div>    
+                    </div>
+                    <div class="item_text">
+                        <h3>Project Name 2</h3>
+                            <div class="clear"></div>
+                            <h4>My Contribution:</h4>
+                            <ul>
+                                <li>HTML/CSS</li>
+                                <li>Wordpress - Content Management</li>
+                                <li>Information Architecture</li>
+                                <li>Images Editing</li>
+                                <li>Author</li>
+                                <li>Administrator</li>
+                            </ul>
+                            <a href="http://www.templatesbook.com" title="Project Name 2" target="_blank" class="btn_see_it_live">www.sitename.com</a>
+                    </div>
+                    <div class="item_text second">
+                        <h4>Overview:</h4>
+                            <div class="clear"></div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas convallis volutpat felis quis suscipit. Fusce suscipit auctor urna quis mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas convallis volutpat felis quis suscipit. Fusce suscipit auctor urna quis mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas convallis volutpat felis quis suscipit. Fusce suscipit auctor urna quis mattis.
+                            </p>
+                            <h5>Year: <span>2011</span></h5>
+                    </div>
+                </div><!-- end div .pprj -->
+            </div><!-- end div .projectsContainer -->
+            <div class="clear"></div>
+        </div><!-- end div #projects -->
+
+        <div class="clear"></div>
+
+        <div id="contact">
+            <h2>Contact.</h2>
+            <div class="clear"></div>
+            <div class="contactContainer">
+                <h3>Get in touch:</h3>
+            	<div class="contact">
+                    <form action="#" method="post" id="contactForm">
+                    <ul>
+                    <li>
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" value="" id="name" />
+                    </li>
+                    <li>
+                    <label for="email">Email:</label>
+                    <input type="text" name="email" value="" id="email" />
+                    </li>
+                    <li>
+                    <label for="tele">Telephone:</label>
+                    <input type="text" name="tele" value="" id="tele" />
+                    </li>
+                    <li class="special" style="display: none;">
+                    <label for="last">Don't fill this in:</label>
+                    <input type="text" name="last" value="" id="last" />
+                    </li>
+                    <li>
+                    <label for="message">Message:</label><textarea rows="5" name="message"></textarea>
+                    </li>
+                    <li class="submitbutton">
+                    <input type="submit" class="btn" value="Send Message" />
+                    </li>
+                    </ul>
+                    </form>
+                </div>
+                <div class="message"><div id="alert"></div></div>
+				
+            </div><!-- end div .contactContainer -->
+            
+            <div class="clear"></div>
+			
+			
+           <div id="btn_top"></div> 
+        </div><!-- end div #contact -->
+    </div><!-- end div #container -->
+</div><!-- end div #wrapper -->
+
+<script type='text/javascript'>
+    QueryLoader.init();
+</script>
+
+</body>
+</html>

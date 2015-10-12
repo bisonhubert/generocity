@@ -13,6 +13,19 @@
 
 ActiveRecord::Schema.define(version: 20151012194133) do
 
+  create_table "donation_centers", force: :cascade do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.string   "phone_number"
+    t.string   "website"
+    t.string   "district"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
   create_table "items", force: :cascade do |t|
     t.string   "name"
     t.integer  "price"
