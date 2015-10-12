@@ -24,12 +24,26 @@ Want to contribute to generocity? Here's how:
 
 ### Technologies
 As a group, we decided on the following technologies. Some were completely new. Others have been the focus of our experience at Dev Bootcamp.
+
 -Built with Ruby on Rails
+
 -User authentication with Devise
+
 -Automated purchasing with CasperJS
+
 -Shopping cart and money handling with Redis and Braintree
 
 
 
 ### Creators
-generocity is [Bison Hubert](https://github.com/davidbison) (team lead), [Ana Nelson](https://github.com/anaclair), [Anthony Castelli](https://github.com/anthonycastelli01), and [Brian Park](https://github.com/br1anp4rk718). This is our Phase 3 final project at DevBootcamp SF.
+generocity is:
+
+[Bison Hubert](https://github.com/davidbison) (team lead)
+
+[Ana Nelson](https://github.com/anaclair)
+
+[Anthony Castelli](https://github.com/anthonycastelli01)
+
+[Brian Park](https://github.com/br1anp4rk718).
+
+This is our Phase 3 final project at DevBootcamp SF.
