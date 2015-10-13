@@ -29,6 +29,10 @@ class TransactionsController < ApplicationController
       current_user.update(braintree_customer_id: @result.transaction.customer_details.id) unless current_user.has_payment_info?
       current_user.purchase_cart_items!
       redirect_to root_url, notice: "Your donation was successful. Thank you for being an amazing person!"
+      # TODO : Run CasperJS file without the user seeing anything weird
+      puts "=" * 60
+      system pwd
+      puts "=" * 60
     else
       flash[:alert] = "Something went wrong while processing your transaction. Please try again!"
       gon.client_token = generate_client_token
