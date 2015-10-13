@@ -1,10 +1,17 @@
-require 'spec_helper'
+require "rails_helper"
 
-describe 'User' do
-  it "has a valid factory"
-  it "is invalid without an email"
-  it "is invalid with an invalid email"
-  it "is invalid without a password"
-  it "is invalid with a password less than 8 characters"
-  it "is invalid with non-unique email address"
+describe User do
+  let(:bad_user) { User.new }
+  it 'Validates presence of email' do
+    expect{bad_user.save!}.to raise_error{ActiveRecord::RecordInvalid}
+  end
+  let(:no_pswd) { User.new(email: "fakeuser@gmail.com") }
+  it 'Is invalid without a password' do
+    expect{no_pswd.save!}.to raise_error{ActiveRecord::RecordInvalid}
+  end
+  let(:min_pswd) { User.new(email: "fakeuser@gmail.com", encrypted_password: "2short") }
+  it 'Is invalid with a password less than 8 characters' do
+    expect{min_pswd.save!}.to raise_error{ActiveRecord::RecordInvalid}
+  end
+
 end
