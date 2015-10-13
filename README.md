@@ -2,12 +2,12 @@ generocity | live generously
 =============================
 
 
-generocity is a chance to connect people interested in helping others with people in need. Born out of a group project in the final phase of Dev Bootcamp SF, our team spent a week conceptualizing, wireframing, researching eCommerce technologies and automated payment systems, designing a look and feel that promotes the ideas behind the project, and coding with the languages we've been immersed in for the last nine weeks. The result is a web application that lets users shop for pantry items and send them out to donation centers in San Francisco, CA.
+generocity is a chance to connect people interested in helping others with people in need. Born out of a group project in the final phase of Dev Bootcamp SF, our team spent a week conceptualizing, wireframing, researching eCommerce technologies and automated payment systems, designing a look and feel that promotes the ideas behind the project, and coding with the languages we've been immersed in for the last nine weeks. The result is a web application that lets users shop for pantry items and send them to a donation center in San Francisco, CA.
 
 
 
 ### Installation
-[generocity](https://dashboard.heroku.com/apps) was launched to Heroku on October 16, 2015. For the full UX, please check us out!
+[generocity](https://generocity.herokuapp.com/) was launched to Heroku on October 16, 2015. For the full UX, please check us out!
 
 
 
@@ -23,15 +23,15 @@ Want to contribute to generocity? Here's how:
 
 
 ### Technologies
-As a group, we decided on the following technologies. Some were completely new. Others have been the focus of our experience at Dev Bootcamp.
+We decided to build generocity with a framework we had all worked with before, while exploring new technologies to design and implement our supportive features.
 
--Built with Ruby on Rails
+1. Ruby on Rails is the central framework taught at Dev Bootcamp. We built genrocity with it so we could expand our understanding of core features and learn ways to improve a few standard components, namely the testing suite.
 
--User authentication with Devise
+2. User authentication was built using Devise, a Ruby gem.
 
--Automated purchasing with CasperJS
+3. Our eCommerce shopping experience uses Foundation on the front end, Redis as a shopping cart, and Braintree to accept user payment. We started with a tutorial and customized it to fit our specific needs.
 
--Shopping cart and money handling with Redis and Braintree
+4. In order to actually buy the goods in our storefront inventory, we built an automated script to login to our Amazon account and purchase the items directly from their warehouse.
 
 
 
