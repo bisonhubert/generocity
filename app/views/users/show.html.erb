@@ -24,6 +24,8 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 </head>
 
+
+
 <body id="body_pat" class="red">
 <div id="wrapper">
 
@@ -79,7 +81,11 @@
             <a id="logo_big"  href="index.html"></a>
             <div id="headline" class="left grid">
                 <h1>WELCOME BACK <%= current_user.email %></h1><br><br>
-
+                <% sum = 0 %>
+                <% @orders.map do |each_price| %>
+                <p><% sum += each_price.item.price %></p> 
+                <%= sum %>        
+                <% end %>
                 <h2>YOUR GENEROCITY LEVEL</h2>
                 <div class="progress">
   				<div class="progress-bar progress-bar-striped active" role="progressbar"
@@ -90,24 +96,20 @@
                 <h3>You've signed in <%= current_user.sign_in_count %> times! Thank you for living GeneroCity-ly</h3>
                 <h2><span>Last time you visited was <%= current_user.last_sign_in_at %></span><br /><br><br><a href="mailto:youremail@yourdomain.com"><%= current_user.email %></a></h2>
             </div>
-            <div id="about_pict" class="grid"><img src="images/my_picture.jpg" alt="Jessica Chung" /></div>
+            <div id="about_pict" class="grid"></div>
             <div class="clear">&nbsp;</div>
             <div class="left grid"></div>
             <div class="left grid about_text">
 				<p>
-					Can put other user information here
+					THINGS THAT I"VE BOUGHT
 				</p>
             </div>
             <div class="right grid about_text">
 				<p>
-					more info??
 					<ul>
-					<li><strong>PUT LIST OF PURCHASES</strong></li>
-					<li><strong>DONATION #1</strong></li>
-					<li><strong>DONATION #2</strong></li>
-					<li><strong>DONATION #3</strong></li>
-					<li><strong>DONATION #4</strong></li>
-					<li><strong>DONATION #5</strong></li>
+                    <% @orders.each do |each| %> 
+					<li><strong><%= each.item.name %></strong></li>
+					   <% end %>
 					</ul>
 				</p>
             </div>
@@ -118,36 +120,19 @@
 
 <!------------------------- WORK -->
 
-        <div id="work">
-            <h2>CAN PUT OTHER STUFF HERE?</h2>
-            <div class="projectsContainer">
-                <div id="project" class="item_details">
-                    <div class="slide_inner"></div>
-                	<div class="next_slide">&nbsp;</div>
-                    <div class="prev_slide">&nbsp;</div>
-<!-- WORK 1 -->
-                    <div class="prjinfo" id="iit_1">
-                        <div class="item_slider">
-                            <ul>
-                                <li class="iit_1 pic selected"><img src="images/projects/slide_w1_1.jpg" alt="My Work 1" /></li>
-                                <li class="iit_1 pic"><img src="images/projects/slide_w1_1.jpg" alt="My Work 1" /></li>
-                                <li class="iit_1 pic"><img src="images/projects/slide_w1_1.jpg" alt="My Work 1" /></li>
-                            </ul> 
-                        </div>
+        
                         <div class="item_text">
                             <h3>My Work 1</h3>
                             <div class="clear"></div>
                             <h4>Overview:</h4>
                             <div class="clear"></div>
-                            <p>Maybe this isn't necessary</p>
                             <h4>Another user feature we might implement?</h4>
                             <ul>
-                                <li>#1</li>
-                                <li>#2</li>
-                                <li>#3</li>
+                            <% @orders.each do |each| %>
+                                <li><%= each.item.description %></li>
+                                <% end %>
                             </ul>
-                            
-                            
+                               
                         </div>
                     </div><!-- end div #iit_1 -->
 <!-- WORK 2 -->
@@ -158,13 +143,11 @@
                             <div class="clear"></div>
                             <h4>Overview:</h4>
                             <div class="clear"></div>
-                            <p>DONATION CENTERS?
-                            </p>
                             <h4>My Contributionsss here?:</h4>
                             <ul>
-                                <li>DONATED HERE #1</li>
-                                <li>Donated HERE #2</li>
-                                <li>Donated here #3</li>
+                            <% @orders.each do |each| %>
+                                <li>$<%= each.item.price %>.00</li>
+                                <% end %>
                             </ul>
                             <h5>Time stamps </h5>
                             
