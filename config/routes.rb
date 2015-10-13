@@ -5,7 +5,6 @@ Rails.application.routes.draw do
 
   get 'transactions/new'
 
-
   get 'carts/show'
 
   resources :items, only: [:show, :index]
