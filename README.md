@@ -2,12 +2,12 @@ generocity | live generously
 =============================
 
 
-generocity is a chance to connect people interested in helping others with people in need. Born out of a group project in the final phase of Dev Bootcamp SF, our team spent a week conceptualizing, wireframing, researching eCommerce technologies and automated payment systems, designing a look and feel that promotes the ideas behind the project, and coding with the languages we've been immersed in for the last nine weeks. The result is a web application that lets users shop for pantry items and send them out to donation centers in San Francisco, CA.
+generocity is a chance to connect people interested in helping others with people in need. Born out of a group project in the final phase of Dev Bootcamp SF, our team spent a week conceptualizing, wireframing, researching eCommerce technologies and automated payment systems, designing a look and feel that promotes the ideas behind the project, and coding with the languages we've been immersed in for the last nine weeks. The result is a web application that lets users shop for pantry items and send them to a donation center in San Francisco, CA.
 
 
 
 ### Installation
-[generocity](https://dashboard.heroku.com/apps) was launched to Heroku on October 16, 2015. For the full UX, please check us out!
+[generocity](https://generocity.herokuapp.com/) was launched to Heroku on October 16, 2015. For the full UX, please check us out!
 
 
 
