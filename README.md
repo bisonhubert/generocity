@@ -25,13 +25,13 @@ Want to contribute to generocity? Here's how:
 ### Technologies
 We decided to build generocity with a framework we had all worked with before, while exploring new technologies to design and implement our supportive features.
 
-1. Ruby on Rails is the central framework taught at Dev Bootcamp. We built genrocity with it so we could expand our understanding of core features and learn ways to improve a few standard components, namely the testing suite.
+1. [Ruby on Rails](http://guides.rubyonrails.org/) is the central framework taught at Dev Bootcamp. We built genrocity with it so we could expand our understanding of core features and learn ways to improve a few standard components, namely the testing suite.
 
-2. User authentication was built using Devise, a Ruby gem.
+2. User authentication was built using [Devise](https://rubygems.org/gems/devise/versions/3.5.2), a Ruby gem.
 
-3. Our eCommerce shopping experience uses Foundation on the front end, Redis as a shopping cart, and Braintree to accept user payment. We started with a tutorial and customized it to fit our specific needs.
+3. Our eCommerce shopping experience uses [Foundation](http://foundation.zurb.com/) on the front end, [Redis](http://redis.io/) as a shopping cart, and [Braintree](https://www.braintreepayments.com/) to accept user payment. We started with a tutorial and customized it to fit our specific needs.
 
-4. In order to actually buy the goods in our storefront inventory, we built an automated script to login to our Amazon account and purchase the items directly from their warehouse.
+4. Using [CasperJS](http://casperjs.org/), we built an automated script to login to our Amazon account and purchase the items directly from their warehouse.
 
 
 
