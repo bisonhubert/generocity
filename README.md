@@ -6,12 +6,12 @@ generocity is a chance to connect people interested in helping others with peopl
 
 
 
-### Installation
+## Installation
 [generocity](https://generocity.herokuapp.com/) was launched to Heroku on October 16, 2015. For the full UX, please check us out!
 
 
 
-### Contributing
+## Contributing
 Want to contribute to generocity? Here's how:
 1. Fork the repo on [GitHub](https://github.com/davidbison/generocity)
 2. Clone down your fork
@@ -22,7 +22,7 @@ Want to contribute to generocity? Here's how:
 
 
 
-### Technologies
+## Technologies
 We decided to build generocity with a framework we had all worked with before, while exploring new technologies to design and implement our supportive features.
 
 1. [Ruby on Rails](http://guides.rubyonrails.org/) is the central framework taught at Dev Bootcamp. We built genrocity with it so we could expand our understanding of core features and learn ways to improve a few standard components, namely the testing suite.
@@ -35,5 +35,5 @@ We decided to build generocity with a framework we had all worked with before, w
 
 
 
-### Creators
+## Creators
 generocity is [Bison Hubert](https://github.com/davidbison) (team lead), [Ana Nelson](https://github.com/anaclair), [Anthony Castelli](https://github.com/anthonycastelli01), [Brian Park](https://github.com/br1anp4rk718). This is our Phase 3 final project at DevBootcamp SF.
