@@ -12,9 +12,13 @@
       <%end%>
     </div>
     <div class="column large-7 glassy-bg text-center" data-equalizer-watch>
-        <p>Item Quantity: <%= $redis.hget "cart#{current_user.id}", item.id %></p>
-        <p class="scale ptm"> <%= item.name %> </p>
+      <p class="scale ptm"> <%= item.name %> </p>
     </div>
+      <form id="update_item_quantity" method="post" action='cart/update/<%=item.id%>' >
+      Quantity:
+      <input type="number" name="quantity" min="1" max="10" value="<%= $redis.hget "cart#{current_user.id}", item.id %>">
+      <input type="button" class="button" value="Update">
+      </form>
     <div class="column large-3 primary-bg text-center radius-r1" data-equalizer-watch>
       <%=link_to "" , class: "remove", data: {targetUrl: remove_from_cart_path(item)} do%>
         Remove From Cart

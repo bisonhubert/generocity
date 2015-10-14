@@ -10,7 +10,19 @@ $(window).load ->
     $.ajax url: '/cart/'+url, type: method, dataType: 'json', data: data, success: (new_count) ->
       $('span.cart-count').html(new_count)
 
+# AJAX to update item quantity within cart
+  $('form#update_item_quantity').on 'click', 'input.button', (e) ->
+    e.preventDefault()
+    $this = $(this)
+    form = $this.closest('form#update_item_quantity')
+    url = form.attr('action')
+    method = form.attr('method')
+    data = form.serialize()
+    $.ajax url: url, type: method, dataType: 'json', data: data, success: (response) ->
+      console.log(response['new_item_count'])
+      #$('.cart-count').html(new_count)
 
+# AJAX to remove all of a particular item from the cart
   $('#mycart .remove').click (e) ->
     e.preventDefault()
     $this = $(this).closest('a')
