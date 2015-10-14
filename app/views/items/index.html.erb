@@ -9,7 +9,6 @@
       <th>Price</th>
       <th>Image</th>
       <th>Description</th>
-      <th>Asin</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,16 +17,13 @@
     <% @items.each do |item| %>
       <tr>
         <td><%= item.name %></td>
-        <td><%= item.price %></td>
-        <td><%= item.image %></td>
+        <td>$<%= item.price %></td>
+        <td><img src="<%= item.image %>" /></td>
         <td><%= item.description %></td>
-        <td><%= item.asin %></td>
-        <td><%= link_to 'Show', item %></td>        
+        <td><%= link_to 'Show', item %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-

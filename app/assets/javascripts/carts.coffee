@@ -1,19 +1,30 @@
 $(window).load ->
-  $('a[data-target]').click (e) ->
+
+# AJAX to add multiple items at a time with quantity form
+  $('form#item_quantity').on 'click', 'input.button', (e) ->
+    e.preventDefault()
+    form = $('form#item_quantity')
+    url = form.attr('action')
+    method = form.attr('method')
+    data = form.serialize()
+    $.ajax url: '/cart/'+url, type: method, dataType: 'json', data: data, success: (new_count) ->
+      $('span.cart-count').html(new_count)
+
+# AJAX to update item quantity within cart
+  $('form#update_item_quantity').on 'click', 'input.button', (e) ->
     e.preventDefault()
     $this = $(this)
-    if $this.data('target') == 'Add to'
-      url = $this.data('addurl')
-      new_target = "Remove from"
-    else
-      url = $this.data('removeurl')
-      new_target = "Add to"
-    $.ajax url: url, type: 'put', success: (data) ->
-      $('.cart-count').html(data)
-      $this.find('span').html(new_target)
-      $this.data('target', new_target)
+    form = $this.closest('form#update_item_quantity')
+    url = form.attr('action')
+    method = form.attr('method')
+    data = form.serialize()
+    $.ajax url: url, type: method, dataType: 'json', data: data, success: (new_counts) ->
+      $('.cart-count').html(new_counts.new_count)
+      console.log(form.closest('span.total_price'))
+      $('span.total_price').html(new_counts.new_total_price)
+      form.next().find('h4').html('$'+new_counts.new_item_price)
 
-
+# AJAX to remove all of a particular item from the cart
   $('#mycart .remove').click (e) ->
     e.preventDefault()
     $this = $(this).closest('a')
