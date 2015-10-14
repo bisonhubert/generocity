@@ -53,6 +53,8 @@ gem 'braintree'
 # Use Gon to pass Rails variables to JavaScript
 gem 'gon'
 
+gem 'sidekiq'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

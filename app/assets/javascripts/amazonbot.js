@@ -2,7 +2,7 @@ var casper = require('casper').create({
     verbose: true,
     logLevel: "debug",
     pageSettings: {
-        loadImages: false, // The script is much faster when this field is set to false
+        loadImages: true, // The script is much faster when this field is set to false
         loadPlugins: true, // The script is much faster when this field is set to false
         userAgent: 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36'
     }
@@ -14,6 +14,15 @@ casper.start().thenOpen("https://www.amazon.com/gp/sign-in.html", function() {
     console.log("1 - Amazon website opened");
     // this.capture("1-AmazonLoginPage.png");
 });
+
+// //Second step is to click to the Sign-in button
+// casper.then(function(){
+//    this.evaluate(function(){
+//       document.getElementById("nav-tools").children[0].doubleclick();
+//    });
+//    // this.echo(this.getTitle());
+//    this.capture("2-AfterLoginSelection.png");
+// });
 
 //Now we have to populate username and password, and submit the form
 casper.then(function(){
@@ -81,8 +90,15 @@ casper.then(function() {
   });
   this.waitForText("Choose a shipping address", function() {
     console.log("==================================================");
-    console.log("8 - Open checkout screen");
+    console.log("8 - Take a screenshot when checkout opens");
     // this.capture("8-Checkout.png");
+  });
+});
+
+casper.then(function() {
+  this.waitForText("Choose a shipping address", function() {
+    console.log("==================================================");
+    console.log("9 - Open checkout screen");
   });
 });
 
@@ -92,11 +108,12 @@ casper.then(function() {
     console.log("Click to select shipping info");
     document.getElementsByClassName("a-button-input")[2].click();
     console.log("Shipping info clicked");
+    // this.capture("9.1-ClickedShipping.png")
   });
   this.waitForText("American Express", function() {
     console.log("==================================================");
-    console.log("9 - Confirm payment info");
-    // this.capture("9-ShipmentInfoBeforeSubmission.png");
+    console.log("10 - Confirm payment info");
+    // this.capture("10-ShipmentInfoBeforeSubmission.png");
   });
 });
 
@@ -108,8 +125,8 @@ casper.then(function() {
   });
   this.waitForText("delivery date", function() {
     console.log("==================================================");
-    console.log("10 - Review order info");
-    // this.capture("10-OrderOverview.png");
+    console.log("11 - Review order info");
+    // this.capture("11-OrderOverview.png");
   });
 });
 
