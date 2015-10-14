@@ -8,12 +8,12 @@ class CartsController < ApplicationController
 
   def add
     $redis.hincrby current_user_cart, params[:item_id], params[:quantity].to_i
-    render json: { new_count: current_user.cart_count, new_item_price: (Item.find(params[:item_id]).price * ($redis.hget current_user_cart, params[:item_id]).to_i), new_total_price: current_user.cart_total_price }, status: 200
+    render json: current_user.cart_count, status: 200
   end
 
   def update
     $redis.hset current_user_cart, params[:item_id], params[:quantity].to_i
-    render json: current_user.cart_count, status: 200
+    render :json => { "new_count" => current_user.cart_count, "new_item_price" => (Item.find(params[:item_id]).price * ($redis.hget current_user_cart, params[:item_id]).to_i), "new_total_price" => current_user.cart_total_price }
   end
 
   def remove
