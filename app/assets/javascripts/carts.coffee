@@ -22,7 +22,7 @@ $(window).load ->
       $('.cart-count').html(new_counts.new_count)
       console.log(form.closest('span.total_price'))
       $('span.total_price').html(new_counts.new_total_price)
-      #$this.closest('h4.scale').html('$'+new_counts.new_item_price)
+      form.next().find('h4').html('$'+new_counts.new_item_price)
 
 # AJAX to remove all of a particular item from the cart
   $('#mycart .remove').click (e) ->

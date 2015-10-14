@@ -23,7 +23,7 @@
       <%=link_to "" , class: "remove", data: {targetUrl: remove_from_cart_path(item)} do%>
         Remove From Cart
       <%end%>
-      <h4 class="scale">$<%= item.price * ($redis.hget "cart#{current_user.id}", item.id).to_i %></h4>
+      <h4 class="item_price">$<%= item.price * ($redis.hget "cart#{current_user.id}", item.id).to_i %></h4>
     </div>
   </div>
   <%end%>
