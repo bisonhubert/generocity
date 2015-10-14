@@ -4,18 +4,27 @@ $(window).load ->
   $('form#item_quantity').on 'click', 'input.button', (e) ->
     e.preventDefault()
     form = $('form#item_quantity')
-    console.log(form)
     url = form.attr('action')
-    console.log("url:",url)
     method = form.attr('method')
-    console.log("method:",method)
     data = form.serialize()
-    console.log(data)
     $.ajax url: '/cart/'+url, type: method, dataType: 'json', data: data, success: (new_count) ->
-      console.log(new_count)
       $('span.cart-count').html(new_count)
 
+# AJAX to update item quantity within cart
+  $('form#update_item_quantity').on 'click', 'input.button', (e) ->
+    e.preventDefault()
+    $this = $(this)
+    form = $this.closest('form#update_item_quantity')
+    url = form.attr('action')
+    method = form.attr('method')
+    data = form.serialize()
+    $.ajax url: url, type: method, dataType: 'json', data: data, success: (new_counts) ->
+      $('.cart-count').html(new_counts.new_count)
+      console.log(form.closest('span.total_price'))
+      $('span.total_price').html(new_counts.new_total_price)
+      form.next().find('h4').html('$'+new_counts.new_item_price)
 
+# AJAX to remove all of a particular item from the cart
   $('#mycart .remove').click (e) ->
     e.preventDefault()
     $this = $(this).closest('a')
