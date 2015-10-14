@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
 
   def cart_count
     cart_quantities = $redis.hvals "cart#{id}"
-    # cart_quantities.map(:to_i).reduce(:+)
+    cart_quantities.map(&:to_i).reduce(:+)
   end
 
   def cart_total_price
