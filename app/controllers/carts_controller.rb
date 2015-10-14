@@ -2,7 +2,7 @@ class CartsController < ApplicationController
   before_action :authenticate_user!
 
   def show
-    cart_ids = $redis.hincrby current_user_cart
+    cart_ids = $redis.hkeys current_user_cart
     @cart_items = Item.find(cart_ids)
   end
 

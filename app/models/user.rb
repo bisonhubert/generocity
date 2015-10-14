@@ -7,17 +7,18 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   def cart_count
-    $redis.scard "cart#{id}"
+    cart_quantities = $redis.hvals "cart#{id}"
+    # cart_quantities.map(:to_i).reduce(:+)
   end
 
   def cart_total_price
     total_price = 0
-    get_cart_items.each { |item| total_price+= item.price }
+    get_cart_items.each { |item| total_price+= item.price * ($redis.hget "cart#{id}", item.id).to_i }
     total_price
   end
 
   def get_cart_items
-    cart_ids = $redis.smembers "cart#{id}"
+    cart_ids = $redis.hkeys "cart#{id}"
     Item.find(cart_ids)
   end
 
