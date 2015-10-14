@@ -4,7 +4,7 @@
     <p class="mb0"> You've selected <span class="cart-count"><%=current_user.cart_count%></span> items!</p>
   </div>
 
-  <select name="donation_centers">
+  <select name="donation_centers" id="center">
   <% @donation_centers.each do |center| %>
   <option value="<%=center.name %>"><%=center.name %></option>
   <% end %>
@@ -20,8 +20,8 @@
       <%end%>
     </div>
     <div class="column large-7 glassy-bg text-center" data-equalizer-watch>
-        <p>Item Quantity: <%= $redis.hget "cart#{current_user.id}", item.id %></p>
-        <p class="scale ptm"> <%= item.name %> </p>
+        <p id='quantity'><%= $redis.hget "cart#{current_user.id}", item.id %></p>
+        <p class="scale ptm"> <%= item.name %> </p> <p id='asin'><%= item.asin %></p>
     </div>
     <div class="column large-3 primary-bg text-center radius-r1" data-equalizer-watch>
       <%=link_to "" , class: "remove", data: {targetUrl: remove_from_cart_path(item)} do%>
@@ -32,5 +32,5 @@
   </div>
   <%end%>
   Total Price: $<%= current_user.cart_total_price %>
-  <%=link_to "Checkout", new_transaction_path, class: "button" unless current_user.get_cart_items.blank?%>
+  <%=link_to "Checkout", new_transaction_path, id: "checkout", class: "button" unless current_user.get_cart_items.blank?%>
 </div>

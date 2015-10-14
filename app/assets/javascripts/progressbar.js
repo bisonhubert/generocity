@@ -22,5 +22,10 @@ $(document).ready(function() {
 	});
 	val = eval(sum.join("+"));
 	$('#total').append(val + " dollars! YOUR A SUPERSTAR!!");
-
+		$('#checkout').on('click', function() {
+		var x = $('#center option:selected').text();
+		var ident = $('#asin').html();
+		var quant = $('#quantity').html();
+		debugger;
 })
+	})

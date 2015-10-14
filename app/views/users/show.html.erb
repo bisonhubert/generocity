@@ -3,8 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta http-equiv="Lang" content="en"/>
-<meta name="author" content="Mihai Balea"/>
-<meta http-equiv="Reply-to" content="contact@mihaibalea.info"/>
+
 
 
 <link href="favicon.ico" type="image/gif" rel="icon" />
@@ -18,150 +17,88 @@
 
 
 <body id="body_pat" class="red">
-<div id="wrapper">
 
-    
-    <div id="tools">
-        <div id="but_expand">+</div>
-        <div id="but_collapse">-</div>
-        <span>JUMP TO:</span>
-        <div class="clear"></div>
-        <div id="toolsHolder">
-            <div id="palette">
-                <div id="c_red" class="selected"></div>
-                <div id="c_blue"></div>
-                <div id="c_green"></div>
-                <div id="c_pink"></div>
-                <div id="c_orange"></div>
-                <div id="c_gray"></div>
-            </div>
-            <div id="patterns">
-                <div id="pat_1" class="selected"></div>
-                <div id="pat_2"></div>
-                <div id="pat_3"></div>
-                <div id="pat_4"></div>
-                <div id="pat_5"></div>
-            </div>
-        </div>
-    </div><!-- end div #tools -->
-
-<!------------------------- NAVIGATION -->
-
-    <div id="navbarHolder">
-        <div id="navbar">
-            <ul>
-                                
-                <li><a id="nav_about" href="#about">About ME<span class="m_w"></span><span class="m_r"></span></a></li>
-                
-            </ul>
-        </div>
-        <br><br>
-    </div><!-- end div #navbarHolder -->
-<a href="mailto:?Subject=Simple Share Buttons&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://simplesharebuttons.com">
-        <img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" />
-    </a>
-    <a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com" target="_blank">
-        <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
-    </a>
-    <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://simplesharebuttons.com" target="_blank">
-        <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
-    </a>
-<!------------------------- CONTENT -->
-    
-    <div id="container">
-        <div id="logo" class="site-message-absolute">
-            <div class="nav_logo_w"></div>
-        </div>
 
 <!------------------------- ABOUT -->
         
-        <div id="about">
-            <a id="logo_big"  href="index.html"></a>
-            <div id="headline" class="left grid">
-                <h1>WELCOME BACK <%= current_user.email %></h1><br><br>
+        <div class="container" id="level" >
+                <h1><span>WELCOME BACK <%= current_user.email %></span></h1><br><br>
                 <h4 id = "total">
                 Thank you for your donations!!! Your total amount donated is
-                </h4>
-
-                <h2>YOUR GENEROCITY LEVEL</h2>
+                </h4><br><br>
+        </div>
+        <div class='container'>
+                <h2 id="level"><span class="label label-primary" id = "level">YOUR GENEROCITY LEVEL</span></h2><br><br>
 
                 <div class="progress" "min-width: 2em;">
   				<div class="progress-bar progress-bar-striped active" role="progressbar" id='bar'
 			  aria-valuenow="" aria-valuemin="0" aria-valuemax="100" style="width:40%">
-			  </div>
-			</div>
+        </div>
+        </div>
+        </div>
+        <div class='container'>
                 <h3>You've signed in <%= current_user.sign_in_count %> times! Thank you for living GeneroCity-ly</h3>
-                <h2><span>Last time you visited was <%= current_user.last_sign_in_at.to_date %></span><br /><br><br><a href="mailto:youremail@yourdomain.com"><%= current_user.email %></a></h2>
-            </div>
-            <div id="about_pict" class="grid"></div>
-            <div class="clear">&nbsp;</div>
-            <div class="left grid"></div>
-            <div class="left grid about_text">
-				<p>
+                <h2><span>Last time you visited was <%= current_user.last_sign_in_at.to_date %></span></h2>
+        </div>
+   
+<br>
+            <div class="container">
+             <div class='row'>
+              <div class='col-md-6'>
+				<h3 class= "label label-info">
 					THINGS THAT I"VE BOUGHT
-				</p>
-            </div>
-            <div class="right grid about_text" id ="amount">
+				</h3>
 				<p>
-					<ul>
+					<ul id='amount'>
                     <% @orders.each do |each| %> 
 					<li><strong><%= each.item.name %></strong></li>
 					   <% end %>
 					</ul>
 				</p>
             </div>
-			<div class="clear"></div>
-		</div><!-- end div #about -->
 
-        <div class="clear"></div>
 
 <!------------------------- WORK -->
+                        <div class='col-md-6' id="test">
+                            <h3 class= "label label-info">Amount Donated!</h3>
+                
+                            <ul>
+                            <% @orders.each do |each| %>
+                                <li><%= each.item.price %>.00</li>
+                                <% end %>
+                            </ul>
+                         </div> 
+                     </div>
+                     </div>
 
-        
-                        <div class="item_text">
-                            <h3><%= current_user.email %> has donated the following types of food!</h3>
-                            <div class="clear"></div>
-                            <div class="clear"></div>
+
+                    <!-- end div #iit_1 -->
+<!-- WORK 2 -->
+                    
+ 
+                        <div class="container">
+                            <h3><span class="label label-primary"><%= current_user.email %> has donated the following types of food!</span></h3>
                             <h4>Descriptions of foods donated!</h4>
                             <ul>
                             <% @orders.each do |each| %>
                                 <li><%= each.item.description %></li>
                                 <% end %>
                             </ul>
-                               
                         </div>
-                    </div><!-- end div #iit_1 -->
-<!-- WORK 2 -->
-                    
- 
-                        <div class="item_text">
-                            <h3><%= current_user.email %> thank you for every single donation!</h3>
-                            <div class="clear"></div>
-                            <h4>Donation invoices</h4>
-                            <div class="clear" ></div>
-                            <ul id = "test">
-                            <% @orders.each do |each| %>
-                                <li><%= each.item.price %>.00</li>
-                                <% end %>
-                            </ul>
 
 
-            	
+                
         
 <!-- PROJECTS -->
         
   
-                    <div class="item_text second">
+                    <div class="container">
                         <h4></h4>
                             <div class="clear"></div>
                             <p>MAYBE USER BIO?
                             </p>
                     </div>
-                </div><!-- end div .pprj -->
-<!-- PROJECT 2 -->
-                
 
-        <div class="clear"></div>
 
    
 
