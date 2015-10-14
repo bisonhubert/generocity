@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
 
+
   resources :donation_centers
 
   get 'transactions/new'
+
   get 'carts/show'
 
   resources :items, only: [:show, :index]
