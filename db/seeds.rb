@@ -14,8 +14,8 @@
 # soap
 # deodorant
 # hygene
-Item.create(name: "Progresso Vegetable Classics Soup, Minestrone, 19 Oz", price: 1.50, image: "../images/minestronesoup.jpg", description: ["Full serving of vegetables"], asin: "B00099XO82")
-Item.create(name: "Progresso Rich & Hearty Soup, Chicken & Homestyle Noodles, 19 Oz", price: 1.50, image: "../images/chickensoup.jpg", description: ["Contains wheat, egg, and soy ingredients", "No MSG added"], asin: "B000Q5LWE2")
+Item.create(name: "Progresso Vegetable Classics Soup, Minestrone, 19 Oz", price: 1.51, image: "../images/minestronesoup.jpg", description: ["Full serving of vegetables"], asin: "B00099XO82")
+Item.create(name: "Progresso Rich & Hearty Soup, Chicken & Homestyle Noodles, 19 Oz", price: 1.51, image: "../images/chickensoup.jpg", description: ["Contains wheat, egg, and soy ingredients", "No MSG added"], asin: "B000Q5LWE2")
 Item.create(name: "Progresso Rich & Hearty Soup, Beef Pot Roast, 18.5 Oz", price: 3.18, image: "../images/beefsoup.jpg", description: [], asin: "B000Q5NG46")
 
 
