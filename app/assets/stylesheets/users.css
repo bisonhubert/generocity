@@ -5,3 +5,31 @@
 #level {
 	text-align: center;
 }
+
+.invoice {
+	text-align: 
+}
+
+#body_pat {
+	background-image: url('http://speakingbootcamps.com/wp-content/uploads/2012/06/teal-and-orange-background.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+
+.visited {
+	color: #FF8E00;
+
+}
+
+.welcome {
+	color: #00796C;
+}
+
+.level {
+	color: #00796C;
+}
+
+#total {
+	color: #00796C;
+}
