@@ -26,11 +26,10 @@
 </p>
 
 <%if signed_in?%>
-  <form id="item_quantity" method="post" action=<%=add_to_cart_path(@item)%>>
-    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <form id="item_quantity" method="post" action='add/<%=@item.id%>' >
     Quantity:
     <input type="number" name="quantity" min="1" max="10" value="1">
-    <input type="submit" value="Add to Cart">
+    <input type="button" class="button" value="Add to Cart">
   </form>
 <%end%>
 
