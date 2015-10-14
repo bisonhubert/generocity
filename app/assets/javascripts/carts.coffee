@@ -1,17 +1,15 @@
 $(window).load ->
-  $('a[data-target]').click (e) ->
+
+  $('form .item_quantity').on "submit", (e) ->
     e.preventDefault()
+    console.log("worked")
     $this = $(this)
-    if $this.data('target') == 'Add to'
-      url = $this.data('addurl')
-      new_target = "Remove from"
-    else
-      url = $this.data('removeurl')
-      new_target = "Add to"
-    $.ajax url: url, type: 'put', success: (data) ->
-      $('.cart-count').html(data)
-      $this.find('span').html(new_target)
-      $this.data('target', new_target)
+    url = $this.attr('action')
+    method = $this.attr('method')
+    data = $this.serialize
+    $.ajax url: url, method: method, data: data, success: (new_count) ->
+      console.log(data)
+      $('.cart-count').html(new_count)
 
 
   $('#mycart .remove').click (e) ->

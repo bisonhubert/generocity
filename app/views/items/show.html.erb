@@ -26,9 +26,12 @@
 </p>
 
 <%if signed_in?%>
-  <%=link_to "", class: "button", data: {target: @cart_action, addUrl: add_to_cart_path(@item), removeUrl: remove_from_cart_path(@item)} do%>
-    <span><%=@cart_action%></span> Cart
-  <%end%>
+  <form id="item_quantity" method="post" action=<%=add_to_cart_path(@item)%>>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    Quantity:
+    <input type="number" name="quantity" min="1" max="10" value="1">
+    <input type="submit" value="Add to Cart">
+  </form>
 <%end%>
 
  |
