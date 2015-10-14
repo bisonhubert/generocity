@@ -15,20 +15,20 @@
   <% @cart_items.each do |item|%>
   <div data-equalizer class="cart-item large-12 column mb1">
     <div class="column large-2 text-center p0" data-equalizer-watch>
-      <%=link_to item do%>
-        <%=image_tag item.image, class: "radius-l1"%>
-      <%end%>
+      <img src="<%=item.image%>"/>
     </div>
     <div class="column large-7 glassy-bg text-center" data-equalizer-watch>
+        <p>Item Quantity: <%= $redis.hget "cart#{current_user.id}", item.id %></p>
         <p class="scale ptm"> <%= item.name %> </p>
     </div>
     <div class="column large-3 primary-bg text-center radius-r1" data-equalizer-watch>
       <%=link_to "" , class: "remove", data: {targetUrl: remove_from_cart_path(item)} do%>
         Remove From Cart
       <%end%>
-      <h4 class="scale">$ <%= item.price %></h4>
+      <h4 class="scale">$ <%= item.price * ($redis.hget "cart#{current_user.id}", item.id).to_i %></h4>
     </div>
   </div>
   <%end%>
+  Total Price: $<%= current_user.cart_total_price %>
   <%=link_to "Checkout", new_transaction_path, class: "button" unless current_user.get_cart_items.blank?%>
 </div>
