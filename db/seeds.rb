@@ -26,7 +26,7 @@ Item.create(name: "Chef Boyardee Ravioli, Beef, (4 Count, 15 Ounces Each)", pric
 
 
 
-Item.create(name: "Skippy Peanut Butter Creamy, 28 oz", price: 12.29, image: "../images/creamypeanutbutter.jpg", description: ["Style: Creamy", "Natural 7g Protein", "Kosher"], asin: "B000RYC9GM")
+Item.create(name: "Jif Peanut Butter Creamy, 28 oz", price: 12.29, image: "../images/creamypeanutbutter.jpg", description: ["Style: Creamy", "Natural 7g Protein", "Kosher"], asin: "B000RYC9GM")
 Item.create(name: "Jif Extra Crunchy Peanut Butter, 40 Oz", price: 3.77, image: "../images/crunchypeanutbutter.jpg", description: ["Style: Extra Crunchy"], asin: "B00I8G6S9K")
 Item.create(name: "Dole Mixed Tropical Fruit In Passion Fruit Nectar, 15.25 Oz", price: 1.42, image: "../images/tropicalfruit.jpg", description: ["Pop and peel lid", "Excellent source of Vitamins A & C", "Kosher"], asin: "B000RY6G3E")
 
