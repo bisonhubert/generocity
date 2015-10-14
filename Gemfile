@@ -45,7 +45,7 @@ gem 'redis'
 gem 'hiredis'
 
 # Use Figaro to securely store Braintree keys
-gem 'figaro'
+# gem 'figaro'
 
 # Use Braintree for payment gateway
 gem 'braintree'
