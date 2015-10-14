@@ -4,7 +4,7 @@
     <p class="mb0"> You've selected <span class="cart-count"><%=current_user.cart_count%></span> items!</p>
   </div>
 
-  <select name="donation_centers">
+  <select name="donation_centers" id="center">
   <% @donation_centers.each do |center| %>
   <option value="<%=center.name %>"><%=center.name %></option>
   <% end %>
@@ -18,7 +18,8 @@
       <img src="<%=item.image%>"/>
     </div>
     <div class="column large-7 glassy-bg text-center" data-equalizer-watch>
-      <p class="scale ptm"> <%= item.name %> </p>
+        <p id='quantity'><%= $redis.hget "cart#{current_user.id}", item.id %></p>
+        <p class="scale ptm"> <%= item.name %> </p> <p id='asin'><%= item.asin %></p>
     </div>
       <form id="update_item_quantity" method="post" action='cart/update/<%=item.id%>' >
       Quantity:
@@ -33,6 +34,7 @@
     </div>
   </div>
   <%end%>
+
   Total Price: $<span class="total_price"><%= current_user.cart_total_price %></span>
   <%=link_to "Checkout", new_transaction_path, class: "button" unless current_user.get_cart_items.blank?%>
 </div>
