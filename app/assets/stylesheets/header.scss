@@ -13,3 +13,33 @@
     min-width: 60%;
   }
 }
+
+.btn-lg {
+    margin: 10px 16px;
+}
+
+.btn-mydefault {
+    color: #ffffff;
+    background-color: transparent;
+    border: none !important;
+}
+
+.btn-mydefault:hover {
+    color: #ffffff;
+    background-color: transparent;
+    border: none !important;
+}
+
+.nav>li>a:visited {
+  color: #ffffff;
+}
+
+a:hover {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.btn.focus, .btn:focus, .btn:hover {
+  border: transparent !important;
+  color: #ffffff !important;
+};

@@ -4,33 +4,52 @@
 <div class="jumbotron">
   <div class="container">
     <ul class="nav nav-pills pull-right">
-        <%if signed_in?%>
-        <li><%= link_to "Profile", user_path(:id) %></li>
-        <li><%=link_to "Logout", destroy_user_session_path, method: :delete%></li>
+      <%if signed_in?%>
+        <li><%= link_to "Profile", user_path(:id), class: 'btn btn-mydefault btn-lg' %></li>
+        <li><%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'btn btn-mydefault btn-lg' %></li>
         <li>
-          <%= link_to cart_path do%>
+          <%= link_to cart_path, class: 'btn btn-mydefault btn-lg' do %>
             <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
             My Cart
             (<span class="cart-count"><%=current_user.cart_count%></span>)
           <%end%>
         </li>
       <%else%>
-        <li role="presentation" class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" role="button" aria-haspopup="true" aria-expanded="false">
-              Login<span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu">
-            <%= render 'devise/sessions/new' %>
-          </ul>
-        </li>
-        <li role="presentation" class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" role="button" aria-haspopup="true" aria-expanded="false">
-            Register<span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu">
+    <!-- Sign Up button trigger modal -->
+    <li><button class="btn btn-mydefault btn-lg" data-toggle="modal" data-target="#signup">
+      Sign Up
+    </button><li>
+    <!-- Sign Up Modal -->
+    <div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="signUpLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="signup">Sign Up</h4>
+          </div>
             <%= render 'devise/registrations/new' %>
-          </ul>
-        </li>
+        </div>
+      </div>
+    </div>
+    <!-- End Sign Up -->
+    <!-- Log In button trigger modal -->
+    <li><button type="button" class="btn btn-mydefault btn-lg" data-toggle="modal" data-target="#login">
+      Log In
+    </button></li>
+    <!-- Log In Modal -->
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="logInLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="login">Log In</h4>
+          </div>
+            <%= render 'devise/sessions/new' %>
+        </div>
+      </div>
+    </div>
+    <!-- End Sign Up -->
+    <!-- End modals -->
       <%end%>
       </li>
     </ul>
