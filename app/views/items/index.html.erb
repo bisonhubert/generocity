@@ -6,13 +6,17 @@
   <% @split_items.each do |items_row| %>
     <div class="row">
       <% items_row.each do |item| %>
-        <div>
+        <div class="col-md-4 col-xs-4">
           <h4><%= item.name %></h4>
-          <ul>
-            <li>$<%= item.price %></li>
-            <li><img src="<%= item.image %>" /></li>
-            <li><%= link_to 'Show', item %></li>
-          </ul>
+          <div class="container">
+            <div>
+              <img src="<%= item.image %>" />
+            </div>
+            <ul>
+              <li>Price: $<%= item.price %></li>
+              <li><%= link_to 'View Item', item %></li>
+            </ul>
+          </div>
         </div>
       <% end %>
     </div> <!-- row div -->
