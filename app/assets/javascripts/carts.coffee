@@ -20,7 +20,7 @@ $(window).load ->
     data = form.serialize()
     $.ajax url: url, type: method, dataType: 'json', data: data, success: (new_counts) ->
       $('.cart-count').html(new_counts.new_count)
-      $('span.total_price').html(new_counts.new_total_price)
+      $('span.total_price').html("$" + (Math.round(new_counts.new_total_price * 100)/100).toFixed(2))
       form.prev().closest('.item_price').html('$'+new_counts.new_item_price)
 
 # AJAX to remove all of a particular item from the cart

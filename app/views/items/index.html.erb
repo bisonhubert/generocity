@@ -1,6 +1,10 @@
-<p id="notice"><%= notice %></p>
+<% if notice %>
+  <p id="notice"><%= notice %></p>
+<% end %>
 
-<h1>Listing Items</h1>
+<div class="container pantry-title">
+  <h1>Pantry</h1>
+</div>
 
 <div class="container">
   <% @split_items.each do |items_row| %>
