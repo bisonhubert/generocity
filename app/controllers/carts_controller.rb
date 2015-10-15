@@ -1,6 +1,7 @@
 class CartsController < ApplicationController
-  skip_before_filter :verify_authenticity_token, :if => Proc.new { |c| c.request.format == 'application/json' }
+  skip_before_filter :verify_authenticity_token
   before_action :authenticate_user!
+
 
   def show
     cart_ids = $redis.hkeys current_user_cart
