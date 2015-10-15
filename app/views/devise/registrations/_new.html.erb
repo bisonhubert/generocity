@@ -1,14 +1,21 @@
-<div class="form-group">
-  <h2>Register</h2>
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<div class="modal-body">
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= devise_error_messages! %>
-
-    <div class=""><%= f.email_field :email, autofocus: true, placeholder: "Email", class: "radius" %></div>
-
-    <div class=""><%= f.password_field :password, autocomplete: "off", placeholder: "Password", class: "radius" %></div>
-
-    <div class=""><%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Confirm password", class: "radius" %></div>
-    <div><%= f.submit "Let's Go", class: "button" %></div>
-  <% end %>
-  <!-- <%= render "devise/shared/links" %> -->
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <%= f.email_field :email, autofocus: true, placeholder: "Email", class: "radius form-control" %>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <%= f.password_field :password, autocomplete: "off", placeholder: "Password", class: "radius form-control" %>
+    </div>
+    <div class="form-group">
+      <label for="password_confirmation">Confirm password</label>
+      <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Confirm password", class: "radius form-control" %>
+    </div>
 </div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    <%= f.submit "Let's Go", class: "btn btn-primary" %>
+  </div>
+<% end %>
