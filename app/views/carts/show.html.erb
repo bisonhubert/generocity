@@ -37,7 +37,7 @@
   <div class="panel panel-default">
     <div class="panel-heading">
       <div class="panel-title">
-        Total Price: $<span class="total_price"><%= current_user.cart_total_price.round(2) %></span>
+        Total Price: <span class="total_price"><%= number_to_currency(current_user.cart_total_price) %></span>
       </div>
 
       <div class="panel-body">
