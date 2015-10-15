@@ -5,6 +5,7 @@ class ItemsController < ApplicationController
   # GET /items.json
   def index
     @items = Item.all
+    @split_items = @items.each_slice(3).to_a
   end
 
   # GET /items/1

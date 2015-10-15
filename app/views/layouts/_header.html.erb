@@ -1,20 +1,39 @@
 <head>
-<ul class="right">
-  <%if signed_in?%>
-    <li><%= link_to "Profile", user_path(:id) %></li>
-    <li><%=link_to current_user.email, edit_user_registration_path%></li>
-    <li><%=link_to "Logout", destroy_user_session_path, method: :delete%></li>
-    <li>
-      <%= link_to cart_path do%>
-        My Cart
-        (<span class="cart-count"><%=current_user.cart_count%></span>)
+<title>generocity | live generously</title>
+<%= image_tag 'generocitylogo.png', class: "logo" %>
+<div class="jumbotron">
+  <div class="container">
+    <ul class="nav nav-pills pull-right">
+        <%if signed_in?%>
+        <li><%= link_to "Profile", user_path(:id) %></li>
+        <li><%=link_to "Logout", destroy_user_session_path, method: :delete%></li>
+        <li>
+          <%= link_to cart_path do%>
+            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+            My Cart
+            (<span class="cart-count"><%=current_user.cart_count%></span>)
+          <%end%>
+        </li>
+      <%else%>
+        <li role="presentation" class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" role="button" aria-haspopup="true" aria-expanded="false">
+              Login<span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <%= render 'devise/sessions/new' %>
+          </ul>
+        </li>
+        <li role="presentation" class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" role="button" aria-haspopup="true" aria-expanded="false">
+            Register<span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <%= render 'devise/registrations/new' %>
+          </ul>
+        </li>
       <%end%>
-    </li>
-  <%else%>
-    <li><%=link_to "Register", new_user_registration_path%></li>
-    <li><%=link_to "Login", new_user_session_path%></li>
-  <%end%>
-  <title>Generocity</title>
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+      </li>
+    </ul>
+  </div>
+</div>
 </head>

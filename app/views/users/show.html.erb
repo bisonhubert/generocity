@@ -17,20 +17,19 @@
 
 <body id="body_pat" class="red">
 
-
 <!------------------------- ABOUT -->
         <hr>
         <div class="container" id="level" >
-                <h1><span class="welcome">WELCOME BACK <%= current_user.email %></span></h1><br><br>
+                <h3><span><lead><%= current_user.email %></lead></span></h3>
                 <h4>
                 <h4 id = "total">
-                <strong>Thank you for being an amazing person! Your total amount donated is</strong>
-                </h4><br><br>
+                Your total amount donated is 
+                </h4>
         </div>
 
         <hr>
         <div class='container'>
-                <h2 id="level"><span class="level" id = "level">YOUR GENEROCITY LEVEL</span></h2><br><br>
+                <h2 id="level"><span class="label label-warning" id = "level">YOUR GENEROCITY LEVEL</span></h2><br><h3 id='level'>Level:1</h3><br>
 
                 <div class="progress" "min-width: 2em;">
   				<div class="progress-bar progress-bar-striped active" role="progressbar" id='bar'
@@ -39,21 +38,21 @@
         </div>
         </div>
         <div class='container'>
-                <h2><span class='visited'>Last time you visited was <%= current_user.last_sign_in_at.to_date %></span></h2>
+                <h4 class='visited'><span class='visited'>Last time you visited was <%= current_user.last_sign_in_at.to_date %>. Welcome back!</span></h4>
         </div>
         <hr>
    
 <br>
-            <div class="container">
+            <div class="container items">
              <div class='row'>
               <div class='col-md-6'>
-				<h1>
+				<h3>
 					<span class= "label label-warning">Donations made:</span>
-				</h1>
+				</h3>
 				<p>
 					<ul id='amount'>
                     <% @orders.each do |each| %> 
-					<li><%= each.item.name %></li>
+					<li><%= each.item.name %></li><br>
 					   <% end %>
 					</ul>
 				</p>
@@ -62,11 +61,11 @@
 
 <!------------------------- WORK -->
                         <div class='col-md-6'>
-                            <h3 class= "label label-warning">Amount Donated!</h3>
+                            <h3><span class= "label label-warning">Amount Donated!</h3>
                 
                             <ul id='test'>
                             <% @orders.each do |each| %>
-                                <li><%= each.item.price %>.00</li>
+                                <li><%= each.item.price %></li><br>
                                 <% end %>
                             </ul>
                          </div> 
@@ -78,12 +77,11 @@
 <!-- WORK 2 --><hr>
                     
  
-                        <div class="container">
+                        <div class="container types">
                             <h3><span class="label label-warning"><%= current_user.email %> has donated the following types of food!</span></h3>
-                            <h4>Descriptions of foods donated!</h4>
                             <ul>
                             <% @orders.each do |each| %>
-                                <li><%= each.item.description %></li>
+                                <li><%= each.item.description %></li><br>
                                 <% end %>
                             </ul>
                         </div>
@@ -97,8 +95,6 @@
                     <div class="container">
                         <h4></h4>
                             <div class="clear"></div>
-                            <p>MAYBE USER BIO?
-                            </p>
                     </div>
 
 
