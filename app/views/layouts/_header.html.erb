@@ -15,22 +15,24 @@
           <%end%>
         </li>
       <%else%>
-        <li role="presentation" class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" role="button" aria-haspopup="true" aria-expanded="false">
-              Login<span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu">
-            <%= render 'devise/sessions/new' %>
-          </ul>
-        </li>
-        <li role="presentation" class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" role="button" aria-haspopup="true" aria-expanded="false">
-            Register<span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu">
-            <%= render 'devise/registrations/new' %>
-          </ul>
-        </li>
+      <!-- Register modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Register</button>
+        <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="Register">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+              <%= render 'devise/registrations/new' %>
+            </div>
+          </div>
+        </div>
+        <!-- Login modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Login</button>
+        <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="Login">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+              <%= render 'devise/sessions/new' %>
+            </div>
+          </div>
+        </div>
       <%end%>
       </li>
     </ul>
