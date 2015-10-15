@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<div class="pantry-item-show">
 <div class="container marketing">
         <h2><%=@item.name%></h2>
 
@@ -13,11 +14,9 @@
             <input type="number" name="quantity" min="1" max="10" value="1">
             <input type="button" class="button" value="Add to Cart">
           </form>
-        <%end%>
+        <%end%><br>
+      <%= link_to 'Back to Pantry', items_path %><br><br><br>
       </div>
     </div>
   </div>
-
-
-|
-<%= link_to 'Back to Pantry', items_path %>
+</div>
