@@ -10,7 +10,7 @@
   <div class="panel panel-default">
     <div class="panel-body container">
       <% @cart_items.each do |item|%>
-        <div class="row">
+        <div class="row cart-item">
           <div class="col-md-6 col-xs-6">
             <img src="<%=item.image%>"/>
           </div>
@@ -50,7 +50,7 @@
 
         <br>
 
-        <%=button_to "Donate", new_transaction_path, class: "btn btn-primary btn-block" unless current_user.get_cart_items.blank?%>
+        <%=button_to "Donate",new_transaction_path, method: :get, class: "btn btn-primary btn-block" unless current_user.get_cart_items.blank?%>
       </div>
     </div>
   </div>
