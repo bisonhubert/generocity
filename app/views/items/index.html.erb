@@ -2,28 +2,24 @@
 
 <h1>Listing Items</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Price</th>
-      <th>Image</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @items.each do |item| %>
-      <tr>
-        <td><%= item.name %></td>
-        <td>$<%= item.price %></td>
-        <td><img src="<%= item.image %>" /></td>
-        <td><%= item.description %></td>
-        <td><%= link_to 'Show', item %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+<div class="container">
+  <% @split_items.each do |items_row| %>
+    <div class="row">
+      <% items_row.each do |item| %>
+        <div class="col-md-4 col-xs-4">
+          <h4><%= item.name %></h4>
+          <div class="container">
+            <div>
+              <img src="<%= item.image %>" />
+            </div>
+            <ul>
+              <li>Price: $<%= item.price %></li>
+              <li><%= link_to 'View Item', item %></li>
+            </ul>
+          </div>
+        </div>
+      <% end %>
+    </div> <!-- row div -->
+    <br>
+  <% end %>
+</div> <!-- container div -->
