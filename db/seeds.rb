@@ -14,33 +14,33 @@
 # soap
 # deodorant
 # hygene
-Item.create(name: "Progresso Vegetable Classics Soup, Minestrone, 19 Oz", price: 1.51, image: "../images/minestronesoup.jpg", description: ["Full serving of vegetables"], asin: "B00099XO82")
-Item.create(name: "Progresso Rich & Hearty Soup, Chicken & Homestyle Noodles, 19 Oz", price: 1.51, image: "../images/chickensoup.jpg", description: ["Contains wheat, egg, and soy ingredients", "No MSG added"], asin: "B000Q5LWE2")
-Item.create(name: "Progresso Rich & Hearty Soup, Beef Pot Roast, 18.5 Oz", price: 3.18, image: "../images/beefsoup.jpg", description: [], asin: "B000Q5NG46")
+Item.create(name: "Minestrone Soup", price: 1.51, image: "../images/minestronesoup.jpg", description: ["Full serving of vegetables"], asin: "B00099XO82")
+Item.create(name: "Chicken & Homestyle Noodles Soup", price: 1.51, image: "../images/chickensoup.jpg", description: ["Contains wheat, egg, and soy ingredients", "No MSG added"], asin: "B000Q5LWE2")
+Item.create(name: "Beef Pot Roast Soup", price: 3.18, image: "../images/beefsoup.jpg", description: [], asin: "B000Q5NG46")
 
 
 
-Item.create(name: "Chunky Roadhouse Beef and Bean Chili, 19 Oz", price: 2.25, image: "../images/chili.jpg", description: ["Bean chili made with lean beef", "Good source of protein, fiber and vitamin A, low cholesterol with no trans fat", "Easy open pull tab"], asin: "B00IAE4O6E")
-Item.create(name: "Bumble Bee Solid White Albacore Tuna in Water, 12 Oz", price: 3.74, image: "../images/tuna.jpg", description: ["Gluten Free", "Kosher", "Omega-3s"], asin: "B0010Z61P2")
-Item.create(name: "Chef Boyardee Ravioli, Beef, (4 Count, 15 Ounces Each)", price: 3.62, image: "../images/ravioli.jpg", description: ["Zero grams trans fat", "10 grams of protein per serving"], asin: "B00I9VBMLI")
+Item.create(name: "Beef and Bean Chili", price: 2.25, image: "../images/chili.jpg", description: ["Bean chili made with lean beef", "Good source of protein, fiber and vitamin A, low cholesterol with no trans fat", "Easy open pull tab"], asin: "B00IAE4O6E")
+Item.create(name: "Canned Tuna in Water", price: 3.74, image: "../images/tuna.jpg", description: ["Gluten Free", "Kosher", "Omega-3s"], asin: "B0010Z61P2")
+Item.create(name: "Beef Ravioli", price: 3.62, image: "../images/ravioli.jpg", description: ["Zero grams trans fat", "10 grams of protein per serving"], asin: "B00I9VBMLI")
 
 
 
-Item.create(name: "Jif Peanut Butter Creamy, 28 oz", price: 12.29, image: "../images/creamypeanutbutter.jpg", description: ["Style: Creamy", "Natural 7g Protein", "Kosher"], asin: "B000RYC9GM")
-Item.create(name: "Jif Extra Crunchy Peanut Butter, 40 Oz", price: 3.77, image: "../images/crunchypeanutbutter.jpg", description: ["Style: Extra Crunchy"], asin: "B00I8G6S9K")
-Item.create(name: "Dole Mixed Tropical Fruit In Passion Fruit Nectar, 15.25 Oz", price: 1.42, image: "../images/tropicalfruit.jpg", description: ["Pop and peel lid", "Excellent source of Vitamins A & C", "Kosher"], asin: "B000RY6G3E")
+Item.create(name: "Creamy Peanut Butter", price: 12.29, image: "../images/creamypeanutbutter.jpg", description: ["Style: Creamy", "Natural 7g Protein", "Kosher"], asin: "B000RYC9GM")
+Item.create(name: "Extra Crunchy Peanut Butter", price: 3.77, image: "../images/crunchypeanutbutter.jpg", description: ["Style: Extra Crunchy"], asin: "B00I8G6S9K")
+Item.create(name: "Mixed Fruit", price: 1.42, image: "../images/tropicalfruit.jpg", description: ["Pop and peel lid", "Excellent source of Vitamins A & C", "Kosher"], asin: "B000RY6G3E")
 
 
 
-Item.create(name: "General Mills Cereals Honey Nut Cheerios Medley Crunch, 13.1 Ounce", price: 2.98, image: "../images/cheerios.jpg", description: ["Good source of calcium and vitamin D"], asin: "B00WYOGJT6")
-Item.create(name: "Green Giant Whole Kernel Sweet Corn, 14.5 Ounce (Pack of 4)", price: 3.28, image: "../images/sweetcorn.jpg", description: ["Official box tops for education brand", "Four pack", "61 oz total"], asin: "B00XBOKQQK")
-Item.create(name: "Green Giant Vegetable Cans, Sweet Peas, 14.5oz", price: 3.28, image: "../images/sweetpeas.jpg", description: ["Kosher", "Pack of four"], asin: "B00XBOKJJO")
+Item.create(name: "Honey Nut Cheerios", price: 2.98, image: "../images/cheerios.jpg", description: ["Good source of calcium and vitamin D"], asin: "B00WYOGJT6")
+Item.create(name: "Sweet Corn", price: 3.28, image: "../images/sweetcorn.jpg", description: ["Official box tops for education brand", "Four pack", "61 oz total"], asin: "B00XBOKQQK")
+Item.create(name: "Sweet Peas", price: 3.28, image: "../images/sweetpeas.jpg", description: ["Kosher", "Pack of four"], asin: "B00XBOKJJO")
 
 
 
-Item.create(name: "Kellogg's Frosted Mini Wheats Original, 24 Ounce Box", price: 3.05, image: "../images/miniwheats.jpg", description: [], asin: "B00QTX0D18")
-Item.create(name: "Nature Valley Crunchy Granola Bars, Variety Pack, 24 Count", price: 3.46, image: "../images/crunchygranola.jpg", description: ["Variety pack includes Oats 'N Honey, Peanut Butter, and Maple Brown Sugar", "Excellent source of whole grain with 16 grams per serving", "24 Count Box"], asin: "B00J2AV5MG")
-Item.create(name: "Quaker Chewy Granola Bars, Reduced Sugar Variety Pack, 18 Count", price: 3.74, image: "../images/chewygranola.jpg", description: ["18-Count Box", "Variety Pack includes Chocolate Chip, Cookies & Cream, and Peanut Butter Chocolate Chip", "25% Less Sugar"], asin: "B00ID0OZKA")
+Item.create(name: "Frosted Mini Wheats", price: 3.05, image: "../images/miniwheats.jpg", description: [], asin: "B00QTX0D18")
+Item.create(name: "Granola Bars", price: 3.46, image: "../images/crunchygranola.jpg", description: ["Variety pack includes Oats 'N Honey, Peanut Butter, and Maple Brown Sugar", "Excellent source of whole grain with 16 grams per serving", "24 Count Box"], asin: "B00J2AV5MG")
+Item.create(name: "Chewy Granola Bars", price: 3.74, image: "../images/chewygranola.jpg", description: ["18-Count Box", "Variety Pack includes Chocolate Chip, Cookies & Cream, and Peanut Butter Chocolate Chip", "25% Less Sugar"], asin: "B00ID0OZKA")
 
 
 
