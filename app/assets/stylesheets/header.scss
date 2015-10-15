@@ -1,0 +1,15 @@
+.jumbotron{
+  background: url('headerwithoutlogo.png') no-repeat center center;
+  background-size: cover;
+  height: 30em;
+}
+
+.logo {
+  padding: 0;
+  margin: auto;
+  float: left;
+  min-width: 30%;
+  @media screen and (max-width: 700px) {
+    min-width: 60%;
+  }
+}
