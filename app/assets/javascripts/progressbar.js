@@ -17,9 +17,7 @@ var hovers = function() {
 	})
 }
 
-var toggleList = function(){
-	$()
-}
+
 
 $(document).ready(function() {
 	$("#bar").css({'background-image': 'none', 'background-color': 'orange'});

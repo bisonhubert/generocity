@@ -50,7 +50,7 @@
 
         <br>
 
-        <%=button_to "Donate", new_transaction_path, class: "btn btn-primary btn-block" unless current_user.get_cart_items.blank?%>
+        <%=button_to "Donate",new_transaction_path, method: :get, class: "btn btn-primary btn-block" unless current_user.get_cart_items.blank?%>
       </div>
     </div>
   </div>
