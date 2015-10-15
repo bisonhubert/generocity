@@ -1,6 +1,10 @@
 <div id="mycart" class="container">
   <div class="alert alert-success">
-    You've selected <span class="cart-count"><%=current_user.cart_count%></span> items!
+    <% if current_user.cart_count %>
+      You've selected <span class="cart-count"><%= current_user.cart_count %></span> items!
+    <% else %>
+      You don't have any items in your cart yet!
+    <% end %>
   </div>
 
   <div class="panel panel-default">
