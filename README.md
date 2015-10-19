@@ -8,18 +8,19 @@ This is our Phase 3 final project at DevBootcamp SF.
 
 
 
-## Installation
-[generocity](https://generocity.herokuapp.com/) was launched to Heroku on October 16, 2015. For the full UX, please check us out!
-
-
-
 ## Contributing
 Want to contribute to generocity? Here's how:
+
 1. Fork the repo on [GitHub](https://github.com/davidbison/generocity)
+
 2. Clone down your fork
+
 3. Create an accurate and concise new branch name to build and push your change from
+
 4. If you are adding new functionality, document it in the README
+
 5. Push the branch up to GitHub
+
 6. Send a pull request to the generocity team
 
 
