@@ -26,7 +26,7 @@ Item.create(name: "Beef Ravioli", price: 3.62, image: "../images/ravioli.jpg", d
 
 
 
-Item.create(name: "Creamy Peanut Butter", price: 12.29, image: "../images/creamypeanutbutter.jpg", description: ["Style: Creamy", "Natural 7g Protein", "Kosher"], asin: "B000RYC9GM")
+Item.create(name: "Creamy Peanut Butter", price: 3.44, image: "../images/creamypeanutbutter.jpg", description: ["Style: Creamy", "Natural 7g Protein", "Kosher"], asin: "B000RYC9GM")
 Item.create(name: "Extra Crunchy Peanut Butter", price: 3.77, image: "../images/crunchypeanutbutter.jpg", description: ["Style: Extra Crunchy"], asin: "B00I8G6S9K")
 Item.create(name: "Mixed Fruit", price: 1.42, image: "../images/tropicalfruit.jpg", description: ["Pop and peel lid", "Excellent source of Vitamins A & C", "Kosher"], asin: "B000RY6G3E")
 
