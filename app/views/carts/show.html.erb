@@ -1,0 +1,57 @@
+<div id="mycart" class="container">
+  <div class="alert alert-success">
+    <% if current_user.cart_count %>
+      You've selected <span class="cart-count"><%= current_user.cart_count %></span> items!
+    <% else %>
+      You don't have any items in your cart yet!
+    <% end %>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-body container">
+      <% @cart_items.each do |item|%>
+        <div class="row cart-item">
+          <div class="col-md-6 col-xs-6">
+            <img src="<%=item.image%>"/>
+          </div>
+
+          <div class="col-md-6 col-xs-6">
+            <p class="scale"> <%= item.name %> </p>
+            <h4 class="item_price"><%= number_to_currency(item.price * ($redis.hget "cart#{current_user.id}", item.id).to_i) %></h4>
+
+            <form id="update_item_quantity" method="post" action='cart/update/<%=item.id%>' >
+              Quantity:
+              <input type="number" name="quantity" min="1" max="10" value="<%= $redis.hget "cart#{current_user.id}", item.id %>">
+              <input type="button" class="button" value="Update">
+            </form>
+
+            <%=link_to "" , class: "remove", data: {targetUrl: remove_from_cart_path(item)} do%>
+              Remove From Cart
+            <% end %>
+          </div>
+        </div>
+      <%end%>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">
+        Total Price: <span class="total_price"><%= number_to_currency(current_user.cart_total_price) %></span>
+      </div>
+
+      <div class="panel-body">
+        <h4>Donation Center:</h4>
+        <select name="donation_centers" id="center" class="form-control">
+          <% @donation_centers.each do |center| %>
+            <option value="<%=center.name %>"><%=center.name %></option>
+          <% end %>
+        </select>
+
+        <br>
+
+        <%=button_to "Donate",new_transaction_path, method: :get, class: "btn btn-primary btn-block" unless current_user.get_cart_items.blank?%>
+      </div>
+    </div>
+  </div>
+</div>
