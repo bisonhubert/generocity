@@ -23,7 +23,7 @@
                 <h3><span><lead><%= current_user.email %></lead></span></h3>
                 <h4>
                 <h4 id = "total">
-                Your total amount donated is 
+                Your total amount donated is
                 </h4>
         </div>
 
@@ -41,7 +41,7 @@
                 <h4 class='visited'><span class='visited'>Last time you visited was <%= current_user.last_sign_in_at.to_date %>. Welcome back!</span></h4>
         </div>
         <hr>
-   
+
 <br>
             <div class="container items">
              <div class='row'>
@@ -51,9 +51,9 @@
 				</h3>
 				<p>
 					<ul id='amount'>
-                    <% @orders.each do |each| %> 
-					<li><%= each.item.name %></li><br>
-					   <% end %>
+                    <% @orders.each do |each| %>
+					   <li><%= each.item.name %></li><br>
+					<% end %>
 					</ul>
 				</p>
             </div>
@@ -62,43 +62,38 @@
 <!------------------------- WORK -->
                         <div class='col-md-6'>
                             <h3><span class= "label label-warning">Amount Donated!</h3>
-                
+
                             <ul id='test'>
                             <% @orders.each do |each| %>
-                                <li><%= each.item.price %></li><br>
+                                <li><%= (each.item.price) %></li><br>
                                 <% end %>
                             </ul>
-                         </div> 
+                         </div>
                      </div>
                      </div>
 
 
                     <!-- end div #iit_1 -->
 <!-- WORK 2 --><hr>
-                    
- 
-                        <div class="container types">
-                            <h3><span class="label label-warning"><%= current_user.email %> has donated the following types of food!</span></h3>
-                            <ul>
-                            <% @orders.each do |each| %>
-                                <li><%= each.item.description %></li><br>
-                                <% end %>
-                            </ul>
-                        </div>
 
 
-                
-        
+                <div class="container types">
+                    <h3><span class="label label-warning"><%= current_user.email %> has donated the following types of food!</span></h3>
+                    <ul>
+                        <% @orders.each do |order| %>
+                            <li><%= order.item.description.gsub("[", "").gsub("]", "").gsub("\"", "") %></li><br>
+                        <% end %>
+                    </ul>
+                </div>
+
 <!-- PROJECTS -->
-        
-  
                     <div class="container">
                         <h4></h4>
                             <div class="clear"></div>
                     </div>
 
 
-   
+
 
 
 
