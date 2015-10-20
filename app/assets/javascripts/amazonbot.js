@@ -30,7 +30,7 @@ casper.then(function(){
     console.log("2 - Login using username and password");
     this.evaluate(function(){
         document.getElementById("ap_email").value="generocityteam@gmail.com";
-        document.getElementById("ap_password").value="blueangels";
+        document.getElementById("ap_password").value=
     });
     // this.echo(this.getTitle());
     this.capture("test/casperimages/2-LoginFilled.png");
